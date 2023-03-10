@@ -1,0 +1,30 @@
+.container {
+  .ativo-name {
+    margin-top: 16px;
+    display: flex;
+    flex-grow: 1;
+  }
+  .logo {
+    width: 100px;
+  }
+  .content-container {
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    .content-sidemenu {
+      user-select: none;
+      .full-width {
+        width: 100%;
+      }
+    }
+  }
+}
+.mat-toolbar.mat-primary {
+  background: #0235ad;
+}
+
+:host ::ng-deep .mdc-list-item__primary-text {
+  display: flex;
+  .mat-icon {
+    padding-right: 10px !important;
+  }
+}

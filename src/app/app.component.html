@@ -1,0 +1,32 @@
+<div class="container">
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="isExpanded = !isExpanded">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="ativo-name">ATIVO - PTR4 - Variação Mensal</h1>
+    <img src="../assets/guide-logo.jpeg" class="logo" />
+  </mat-toolbar>
+  <mat-sidenav-container class="content-container" autosize>
+    <mat-sidenav #sidenav class="content-sidemenu" mode="side" opened="true">
+      <mat-nav-list>
+        <mat-list-item routerLink="table-view">
+          <mat-icon> table_chart</mat-icon>
+          <span class="full-width" *ngIf="isExpanded || isShowing"
+            >Tabela Ativo</span
+          >
+        </mat-list-item>
+        <mat-list-item routerLink="chart-view">
+          <mat-icon>graphic_eq</mat-icon>
+          <span class="full-width" *ngIf="isExpanded || isShowing"
+            >Gráfico Ativo</span
+          >
+        </mat-list-item>
+      </mat-nav-list>
+      <mat-nav-list> </mat-nav-list>
+    </mat-sidenav>
+
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-container>
+</div>
